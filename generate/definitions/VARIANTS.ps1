@@ -2,19 +2,29 @@
 $local:VARIANTS_MATRIX = @(
     @{
         package = 'ansible'
-        package_version = '2.3.0.0-r1'
+        package_version = '2.9.14-r0'
         distro = 'alpine'
-        distro_version = '3.6'
+        distro_version = '3.11'
         subvariants = @(
-            @{ components = @() }
+            @{ components = $null }
+            @{ components = @( 'ssh' ); tag_as_latest = $true }
+        )
+    }
+    @{
+        package = 'ansible'
+        package_version = '2.8.16-r0'
+        distro = 'alpine'
+        distro_version = '3.10'
+        subvariants = @(
+            @{ components = $null }
             @{ components = @( 'ssh' ) }
         )
     }
     @{
         package = 'ansible'
-        package_version = '2.4.6.0-r1'
+        package_version = '2.7.17-r0'
         distro = 'alpine'
-        distro_version = '3.7'
+        distro_version = '3.9'
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'ssh' ) }
@@ -32,9 +42,9 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.7.17-r0'
+        package_version = '2.4.6.0-r1'
         distro = 'alpine'
-        distro_version = '3.9'
+        distro_version = '3.7'
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'ssh' ) }
@@ -42,22 +52,12 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.8.16-r0'
+        package_version = '2.3.0.0-r1'
         distro = 'alpine'
-        distro_version = '3.10'
+        distro_version = '3.6'
         subvariants = @(
-            @{ components = $null }
+            @{ components = @() }
             @{ components = @( 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.9.14-r0'
-        distro = 'alpine'
-        distro_version = '3.11'
-        subvariants = @(
-            @{ components = $null }
-            @{ components = @( 'ssh' ); tag_as_latest = $true }
         )
     }
 )
