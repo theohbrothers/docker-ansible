@@ -5,7 +5,7 @@
 [![docker-image-size](https://img.shields.io/microbadger/image-size/theohbrothers/docker-ansible/latest)](https://hub.docker.com/r/theohbrothers/docker-ansible)
 [![docker-image-layers](https://img.shields.io/microbadger/layers/theohbrothers/docker-ansible/latest)](https://hub.docker.com/r/theohbrothers/docker-ansible)
 
-Dockerized `ansible` alpine image with useful tools.
+Dockerized `ansible` with useful tools.
 
 ## Tags
 
