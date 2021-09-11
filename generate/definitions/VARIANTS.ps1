@@ -2,22 +2,32 @@
 $local:VARIANTS_MATRIX = @(
     @{
         package = 'ansible'
-        package_version = '2.9.14-r0'
+        package_version = '2.10.7-r0'
         distro = 'alpine'
-        distro_version = '3.11'
+        distro_version = '3.13'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'ssh' ); tag_as_latest = $true }
+            @{ components = @( 'sops', 'ssh' ); tag_as_latest = $true }
         )
     }
     @{
         package = 'ansible'
-        package_version = '2.8.16-r0'
+        package_version = '2.9.18-r0'
+        distro = 'alpine'
+        distro_version = '3.11'
+        subvariants = @(
+            @{ components = $null }
+            @{ components = @( 'sops', 'ssh' ); tag_as_latest = $true }
+        )
+    }
+    @{
+        package = 'ansible'
+        package_version = '2.8.19-r0'
         distro = 'alpine'
         distro_version = '3.10'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'ssh' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -27,7 +37,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.9'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'ssh' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -37,7 +47,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.8'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'ssh' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -47,7 +57,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.7'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'ssh' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -57,7 +67,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.6'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'ssh' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
 )
