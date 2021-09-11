@@ -13,7 +13,7 @@ Dockerized `ansible` with useful tools.
 | `:v2.10.7-alpine-3.13` | [View](variants/v2.10.7-alpine-3.13 ) |
 | `:v2.10.7-sops-ssh-alpine-3.13`, `:latest` | [View](variants/v2.10.7-sops-ssh-alpine-3.13 ) |
 | `:v2.9.18-alpine-3.11` | [View](variants/v2.9.18-alpine-3.11 ) |
-| `:v2.9.18-sops-ssh-alpine-3.11`, `:latest` | [View](variants/v2.9.18-sops-ssh-alpine-3.11 ) |
+| `:v2.9.18-sops-ssh-alpine-3.11` | [View](variants/v2.9.18-sops-ssh-alpine-3.11 ) |
 | `:v2.8.19-alpine-3.10` | [View](variants/v2.8.19-alpine-3.10 ) |
 | `:v2.8.19-sops-ssh-alpine-3.10` | [View](variants/v2.8.19-sops-ssh-alpine-3.10 ) |
 | `:v2.7.17-alpine-3.9` | [View](variants/v2.7.17-alpine-3.9 ) |
