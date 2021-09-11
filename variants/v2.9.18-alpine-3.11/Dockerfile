@@ -7,5 +7,3 @@ RUN apk add --no-cache ansible=2.9.18-r0
 
 
 
-
-
