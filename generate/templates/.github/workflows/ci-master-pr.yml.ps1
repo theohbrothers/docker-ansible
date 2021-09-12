@@ -104,7 +104,7 @@ $( $VARIANTS | % {
       uses: docker/build-push-action@v2
       with:
         context: ${{ steps.prep.outputs.CONTEXT }}
-        platforms: linux/amd64
+        platforms: linux/386,linux/amd64,linux/arm,linux/arm64,linux/s390x
         push: false
         tags: |
           ${{ github.repository }}:${{ steps.prep.outputs.VARIANT_TAG_WITH_REF }}
@@ -119,7 +119,7 @@ $( $VARIANTS | % {
       uses: docker/build-push-action@v2
       with:
         context: ${{ steps.prep.outputs.CONTEXT }}
-        platforms: linux/amd64
+        platforms: linux/386,linux/amd64,linux/arm,linux/arm64,linux/s390x
         push: true
         tags: |
           ${{ github.repository }}:${{ steps.prep.outputs.VARIANT_TAG_WITH_REF }}
@@ -134,7 +134,7 @@ $( $VARIANTS | % {
       uses: docker/build-push-action@v2
       with:
         context: ${{ steps.prep.outputs.CONTEXT }}
-        platforms: linux/amd64
+        platforms: linux/386,linux/amd64,linux/arm,linux/arm64,linux/s390x
         push: true
         tags: |
           ${{ github.repository }}:${{ steps.prep.outputs.VARIANT_TAG }}
@@ -252,7 +252,7 @@ if ( $_['tag_as_latest'] ) {
 
 
   publish-draft-release:
-    needs: [$( $local:WORKFLOW_JOB_NAMES -join ', ' ), converge-master-and-release-branches]
+    needs: [$( $local:WORKFLOW_JOB_NAMES -join ', ' ), converge-master-and-release-branches, resolve-release-tag]
 "@
 @'
 
