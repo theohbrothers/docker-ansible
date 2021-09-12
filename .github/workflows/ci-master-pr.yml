@@ -1903,7 +1903,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-draft-release:
-    needs: [build-v2-10-7-alpine-3-13, build-v2-10-7-sops-ssh-alpine-3-13, build-v2-9-18-alpine-3-11, build-v2-9-18-sops-ssh-alpine-3-11, build-v2-8-19-alpine-3-10, build-v2-8-19-sops-ssh-alpine-3-10, build-v2-7-17-alpine-3-9, build-v2-7-17-sops-ssh-alpine-3-9, build-v2-6-20-alpine-3-8, build-v2-6-20-sops-ssh-alpine-3-8, build-v2-4-6-0-alpine-3-7, build-v2-4-6-0-sops-ssh-alpine-3-7, build-v2-3-0-0-alpine-3-6, build-v2-3-0-0-sops-ssh-alpine-3-6, converge-master-and-release-branches]
+    needs: [build-v2-10-7-alpine-3-13, build-v2-10-7-sops-ssh-alpine-3-13, build-v2-9-18-alpine-3-11, build-v2-9-18-sops-ssh-alpine-3-11, build-v2-8-19-alpine-3-10, build-v2-8-19-sops-ssh-alpine-3-10, build-v2-7-17-alpine-3-9, build-v2-7-17-sops-ssh-alpine-3-9, build-v2-6-20-alpine-3-8, build-v2-6-20-sops-ssh-alpine-3-8, build-v2-4-6-0-alpine-3-7, build-v2-4-6-0-sops-ssh-alpine-3-7, build-v2-3-0-0-alpine-3-6, build-v2-3-0-0-sops-ssh-alpine-3-6, converge-master-and-release-branches, resolve-release-tag]
     # For Generate-DockerImageVariants: For CalVer releases. Each push to 'release' branch is a time-based release.
     # if: startsWith(github.ref, 'refs/tags/')
     if: github.ref == 'refs/heads/release'
