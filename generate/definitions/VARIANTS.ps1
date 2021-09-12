@@ -107,8 +107,8 @@ $VARIANTS_SHARED = @{
         templates = @{
             'Dockerfile' = @{
                 common = $true
-                includeHeader = $true
-                includeFooter = $true
+                includeHeader = $false
+                includeFooter = $false
                 passes = @(
                     @{
                         variables = @{}
@@ -118,6 +118,3 @@ $VARIANTS_SHARED = @{
         }
     }
 }
-
-# Send definitions down the pipeline
-$VARIANTS
