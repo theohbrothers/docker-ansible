@@ -5,4 +5,4 @@ RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 
 RUN apk add --no-cache ansible=2.3.0.0-r1
 
-ENTRYPOINT [ "ansible" ]
+CMD [ "ansible" ]

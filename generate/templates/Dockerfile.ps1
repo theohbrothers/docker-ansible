@@ -36,6 +36,6 @@ RUN apk add --no-cache openssh-client
 }
 
 @"
-ENTRYPOINT [ "ansible" ]
+CMD [ "ansible" ]
 
 "@
