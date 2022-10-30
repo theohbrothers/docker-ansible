@@ -24,3 +24,17 @@ Dockerized `ansible` with useful tools.
 | `:v2.4.6.0-sops-ssh-alpine-3.7` | [View](variants/v2.4.6.0-sops-ssh-alpine-3.7 ) |
 | `:v2.3.0.0-alpine-3.6` | [View](variants/v2.3.0.0-alpine-3.6 ) |
 | `:v2.3.0.0-sops-ssh-alpine-3.6` | [View](variants/v2.3.0.0-sops-ssh-alpine-3.6 ) |
+
+## Development
+
+Requires Windows `powershell` or [`pwsh`](https://github.com/PowerShell/PowerShell).
+
+```powershell
+# Install Generate-DockerImageVariants module: https://github.com/theohbrothers/Generate-DockerImageVariants
+Install-Module -Name Generate-DockerImageVariants -Repository PSGallery -Scope CurrentUser -Force -Verbose
+
+# Edit ./generate templates
+
+# Generate the variants
+Generate-DockerImageVariants .
+```
