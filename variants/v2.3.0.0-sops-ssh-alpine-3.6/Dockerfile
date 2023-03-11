@@ -5,6 +5,8 @@ RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 
 RUN apk add --no-cache ansible=2.3.0.0-r1
 
+RUN apk add --no-cache ca-certificates
+
 # Fix wget not working in alpine:3.6. https://github.com/gliderlabs/docker-alpine/issues/423
 RUN apk add --no-cache libressl
 
