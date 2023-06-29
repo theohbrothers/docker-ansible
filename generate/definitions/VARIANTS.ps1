@@ -1,5 +1,16 @@
 # Docker image variants' definitions
 $local:VARIANTS_MATRIX = @(
+    # Since v2.10, ansible has been split into two packages, namely ansible and ansible-core. See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
+    @{
+        package = 'ansible-core'
+        package_version = '2.11.6-r1'
+        distro = 'alpine'
+        distro_version = '3.15'
+        subvariants = @(
+            @{ components = @() }
+            @{ components = @( 'sops', 'ssh' ) }
+        )
+    }
     @{
         package = 'ansible'
         package_version = '2.10.7-r0'
@@ -7,7 +18,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.13'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ); tag_as_latest = $true }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -98,12 +109,8 @@ $VARIANTS = @(
                         $variant['distro']
                         $variant['distro_version']
                 ) -join '-'
-                tag_as_latest = if ( $subVariant.Contains('tag_as_latest') ) {
-                    $subVariant['tag_as_latest']
-                } else {
-                    $false
-                }
-            }
+                tag_as_latest = if ($variant['package_version'] -eq $local:VARIANTS_MATRIX[0]['package_version'] -and $subVariant['components'].Count -eq 0) { $true } else { $false }
+           }
         }
     }
 )
