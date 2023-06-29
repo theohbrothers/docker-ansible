@@ -3,6 +3,16 @@ $local:VARIANTS_MATRIX = @(
     # Since v2.10, ansible has been split into two packages, namely ansible and ansible-core. See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
     @{
         package = 'ansible-core'
+        package_version = '2.14.5-r0'
+        distro = 'alpine'
+        distro_version = '3.18'
+        subvariants = @(
+            @{ components = @() }
+            @{ components = @( 'sops', 'ssh' ) }
+        )
+    }
+    @{
+        package = 'ansible-core'
         package_version = '2.13.6-r0'
         distro = 'alpine'
         distro_version = '3.17'
