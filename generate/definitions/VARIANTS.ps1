@@ -2,12 +2,22 @@
 $local:VARIANTS_MATRIX = @(
     @{
         package = 'ansible'
+        package_version = '4.8.0-r0'
+        distro = 'alpine'
+        distro_version = '3.15'
+        subvariants = @(
+            @{ components = @() }
+            @{ components = @( 'sops', 'ssh' ) }
+        )
+    }
+    @{
+        package = 'ansible'
         package_version = '2.10.7-r0'
         distro = 'alpine'
         distro_version = '3.13'
         subvariants = @(
-            @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ); tag_as_latest = $true }
+            @{ components = @() }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -16,7 +26,7 @@ $local:VARIANTS_MATRIX = @(
         distro = 'alpine'
         distro_version = '3.11'
         subvariants = @(
-            @{ components = $null }
+            @{ components = @() }
             @{ components = @( 'sops', 'ssh' ) }
         )
     }
@@ -26,7 +36,7 @@ $local:VARIANTS_MATRIX = @(
         distro = 'alpine'
         distro_version = '3.10'
         subvariants = @(
-            @{ components = $null }
+            @{ components = @() }
             @{ components = @( 'sops', 'ssh' ) }
         )
     }
@@ -98,11 +108,7 @@ $VARIANTS = @(
                         $variant['distro']
                         $variant['distro_version']
                 ) -join '-'
-                tag_as_latest = if ( $subVariant.Contains('tag_as_latest') ) {
-                    $subVariant['tag_as_latest']
-                } else {
-                    $false
-                }
+                tag_as_latest = if ($variant['package_version'] -eq $local:VARIANTS_MATRIX[0]['package_version'] -and $subVariant['components'].Count -eq 0) { $true } else { $false }
             }
         }
     }
