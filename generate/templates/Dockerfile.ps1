@@ -4,7 +4,10 @@ ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
 
-RUN apk add --no-cache $( $VARIANT['_metadata']['package'] )=$( $VARIANT['_metadata']['package_version'] )
+# Install ansible
+RUN set -eux; \
+    apk add --no-cache $( $VARIANT['_metadata']['package'] )=$( $VARIANT['_metadata']['package_version'] ); \
+    ansible --version
 
 RUN apk add --no-cache ca-certificates
 
