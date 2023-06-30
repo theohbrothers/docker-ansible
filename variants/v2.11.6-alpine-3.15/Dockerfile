@@ -7,4 +7,7 @@ RUN apk add --no-cache ansible-core=2.11.6-r1
 
 RUN apk add --no-cache ca-certificates
 
-CMD [ "ansible" ]
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x docker-entrypoint.sh
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
