@@ -6,15 +6,38 @@ RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
 
 # Install ansible
 RUN set -eux; \
-    apk add --no-cache $( $VARIANT['_metadata']['package'] )$( if ( $VARIANT['_metadata']['distro'] -eq 'alpine' -and $VARIANT['_metadata']['distro_version'] -eq '3.6' ) { '=' } else { '~=' } )$( $VARIANT['_metadata']['package_version'] ); \
 
 "@
-$( if ($VARIANT['_metadata']['package'] -eq 'ansible-core') {
+if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.6') {
 @"
-    apk add ansible; \
+    apk add make g++ python3 python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
 
 "@
-})
+    if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.11') {
+@"
+    MAKEFLAGS="-j`$(nproc)" pip install ansible-core==$( $VARIANT['_metadata']['package_version'] ); \
+
+"@
+    }else {
+@"
+    MAKEFLAGS="-j`$(nproc)" pip install ansible==$( $VARIANT['_metadata']['package_version'] ); \
+
+"@
+    }
+@"
+    apk del make g++ python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
+
+"@
+}else {
+@"
+    apk add make g++ python2 python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
+    # Fix PyYAML failing. See: https://stackoverflow.com/questions/76708329/docker-compose-no-longer-building-image-attributeerror-cython-sources
+    MAKEFLAGS="-j`$(nproc)" pip install pyyaml==5.4.1 --no-cache-dir --no-build-isolation; \
+    MAKEFLAGS="-j`$(nproc)" pip install ansible==$( $VARIANT['_metadata']['package_version'] ); \
+    apk del make g++ python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
+
+"@
+}
 @"
     ansible --version
 

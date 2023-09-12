@@ -2,106 +2,31 @@
 # Since v2.10, ansible has been split into two packages, namely ansible-core and ansible
 # See: https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#where-did-all-the-modules-go
 # See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
+# See corresponding ansible-core / ansible core versions: https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#ansible-changelogs
+$local:VERSIONS = @(
+    '2.14.5'
+    '2.13.6'
+    '2.11.6'
+    '2.10.7'
+    '2.9.18'
+    '2.8.19'
+    '2.7.17'
+    '2.6.20'
+    '2.4.6.0'
+    '2.3.0.0'
+)
 $local:VARIANTS_MATRIX = @(
-    @{
-        package = 'ansible-core'
-        package_version = '2.14.5'
-        distro = 'alpine'
-        distro_version = '3.18'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible-core'
-        package_version = '2.13.6'
-        distro = 'alpine'
-        distro_version = '3.17'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible-core'
-        package_version = '2.11.6'
-        distro = 'alpine'
-        distro_version = '3.15'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.10.7'
-        distro = 'alpine'
-        distro_version = '3.13'
-        subvariants = @(
-            @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.9.18'
-        distro = 'alpine'
-        distro_version = '3.11'
-        subvariants = @(
-            @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.8.19'
-        distro = 'alpine'
-        distro_version = '3.10'
-        subvariants = @(
-            @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.7.17'
-        distro = 'alpine'
-        distro_version = '3.9'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.6.20'
-        distro = 'alpine'
-        distro_version = '3.8'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.4.6.0'
-        distro = 'alpine'
-        distro_version = '3.7'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'ansible'
-        package_version = '2.3.0.0-r1'
-        distro = 'alpine'
-        distro_version = '3.6'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
-        )
+    foreach ($v in $local:VERSIONS) {
+        @{
+            package = 'ansible-core'
+            package_version = $v
+            distro = 'alpine'
+            distro_version = if ([version]$v -ge [version]'2.6') { '3.15' } else { '3.11' }
+            subvariants = @(
+                @{ components = @() }
+                @{ components = @( 'sops', 'ssh' ) }
+            )
+        }
     }
 )
 $VARIANTS = @(
