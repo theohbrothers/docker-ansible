@@ -108,7 +108,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.14.5-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -122,7 +122,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.14.5-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -135,7 +135,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.14.5-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -229,7 +229,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.14.5-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -243,7 +243,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.14.5-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -256,7 +256,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.14.5-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -349,7 +349,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.13.6-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -363,7 +363,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.13.6-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -376,7 +376,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.13.6-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -469,7 +469,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.13.6-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -483,7 +483,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.13.6-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -496,7 +496,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.13.6-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -589,7 +589,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.11.6-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -603,7 +603,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.11.6-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -616,7 +616,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.11.6-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -709,7 +709,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.11.6-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -723,7 +723,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.11.6-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -736,7 +736,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.11.6-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -829,7 +829,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.10.7-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -843,7 +843,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.10.7-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -856,7 +856,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.10.7-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -949,7 +949,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.10.7-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -963,7 +963,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.10.7-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -976,7 +976,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.10.7-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1069,7 +1069,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.9.18-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1083,7 +1083,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.9.18-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1096,7 +1096,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.9.18-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1189,7 +1189,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.9.18-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1203,7 +1203,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.9.18-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1216,7 +1216,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.9.18-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1309,7 +1309,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.8.19-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1323,7 +1323,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.8.19-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1336,7 +1336,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.8.19-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1429,7 +1429,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.8.19-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1443,7 +1443,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.8.19-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1456,7 +1456,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.8.19-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1549,7 +1549,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.7.17-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1563,7 +1563,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.7.17-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1576,7 +1576,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.7.17-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1669,7 +1669,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.7.17-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1683,7 +1683,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.7.17-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1696,7 +1696,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.7.17-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1789,7 +1789,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.6.20-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1803,7 +1803,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.6.20-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1816,7 +1816,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.6.20-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -1909,7 +1909,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.6.20-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1923,7 +1923,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.6.20-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -1936,7 +1936,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.6.20-sops-ssh-alpine-3.15
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -2029,7 +2029,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.4.6.0-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2043,7 +2043,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.4.6.0-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2056,7 +2056,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.4.6.0-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -2149,7 +2149,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.4.6.0-sops-ssh-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2163,7 +2163,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.4.6.0-sops-ssh-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2176,7 +2176,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.4.6.0-sops-ssh-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -2269,7 +2269,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.3.0.0-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2283,7 +2283,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.3.0.0-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2296,7 +2296,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.3.0.0-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
@@ -2389,7 +2389,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.3.0.0-sops-ssh-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2403,7 +2403,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.3.0.0-sops-ssh-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.REF_VARIANT }}
@@ -2416,7 +2416,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: variants/v2.3.0.0-sops-ssh-alpine-3.11
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT }}
