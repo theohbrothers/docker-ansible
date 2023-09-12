@@ -6,6 +6,7 @@ RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 # Install ansible
 RUN set -eux; \
     apk add --no-cache ansible-core~=2.14.5; \
+    apk add ansible; \
     ansible --version
 
 RUN apk add --no-cache ca-certificates

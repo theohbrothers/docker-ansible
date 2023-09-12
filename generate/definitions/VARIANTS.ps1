@@ -1,8 +1,8 @@
 # Docker image variants' definitions
+# Since v2.10, ansible has been split into two packages, namely ansible-core and ansible
+# See: https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#where-did-all-the-modules-go
+# See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
 $local:VARIANTS_MATRIX = @(
-    # Since v2.10, ansible has been split into two packages, namely ansible and ansible-core.
-    # See: https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#where-did-all-the-modules-go
-    # See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
     @{
         package = 'ansible-core'
         package_version = '2.14.5'
