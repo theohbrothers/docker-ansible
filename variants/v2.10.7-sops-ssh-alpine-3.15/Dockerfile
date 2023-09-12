@@ -5,7 +5,7 @@ RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 
 # Install ansible
 RUN set -eux; \
-    apk add make g++ python3 python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
+    apk add --no-cache make g++ python3 python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
     MAKEFLAGS="-j$(nproc)" pip install ansible==2.10.7; \
     apk del make g++ python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
     ansible --version

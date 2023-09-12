@@ -10,7 +10,7 @@ RUN set -eux; \
 "@
 if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.6') {
 @"
-    apk add make g++ python3 python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
+    apk add --no-cache make g++ python3 python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
 
 "@
     if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.11') {
@@ -30,7 +30,7 @@ if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.6') {
 "@
 }else {
 @"
-    apk add make g++ python2 python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
+    apk add --no-cache make g++ python2 python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
     # Fix PyYAML failing. See: https://stackoverflow.com/questions/76708329/docker-compose-no-longer-building-image-attributeerror-cython-sources
     MAKEFLAGS="-j`$(nproc)" pip install pyyaml==5.4.1 --no-cache-dir --no-build-isolation; \
     MAKEFLAGS="-j`$(nproc)" pip install ansible==$( $VARIANT['_metadata']['package_version'] ); \

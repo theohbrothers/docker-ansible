@@ -5,7 +5,7 @@ RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 
 # Install ansible
 RUN set -eux; \
-    apk add make g++ python2 python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
+    apk add --no-cache make g++ python2 python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
     # Fix PyYAML failing. See: https://stackoverflow.com/questions/76708329/docker-compose-no-longer-building-image-attributeerror-cython-sources
     MAKEFLAGS="-j$(nproc)" pip install pyyaml==5.4.1 --no-cache-dir --no-build-isolation; \
     MAKEFLAGS="-j$(nproc)" pip install ansible==2.4.6.0; \
