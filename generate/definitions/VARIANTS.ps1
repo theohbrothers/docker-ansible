@@ -1,9 +1,11 @@
 # Docker image variants' definitions
 $local:VARIANTS_MATRIX = @(
-    # Since v2.10, ansible has been split into two packages, namely ansible and ansible-core. See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
+    # Since v2.10, ansible has been split into two packages, namely ansible and ansible-core.
+    # See: https://docs.ansible.com/ansible/latest/reference_appendices/faq.html#where-did-all-the-modules-go
+    # See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
     @{
         package = 'ansible-core'
-        package_version = '2.14.5-r0'
+        package_version = '2.14.5'
         distro = 'alpine'
         distro_version = '3.18'
         subvariants = @(
@@ -13,7 +15,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible-core'
-        package_version = '2.13.6-r0'
+        package_version = '2.13.6'
         distro = 'alpine'
         distro_version = '3.17'
         subvariants = @(
@@ -23,7 +25,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible-core'
-        package_version = '2.11.6-r1'
+        package_version = '2.11.6'
         distro = 'alpine'
         distro_version = '3.15'
         subvariants = @(
@@ -33,7 +35,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.10.7-r0'
+        package_version = '2.10.7'
         distro = 'alpine'
         distro_version = '3.13'
         subvariants = @(
@@ -43,7 +45,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.9.18-r0'
+        package_version = '2.9.18'
         distro = 'alpine'
         distro_version = '3.11'
         subvariants = @(
@@ -53,7 +55,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.8.19-r0'
+        package_version = '2.8.19'
         distro = 'alpine'
         distro_version = '3.10'
         subvariants = @(
@@ -63,7 +65,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.7.17-r0'
+        package_version = '2.7.17'
         distro = 'alpine'
         distro_version = '3.9'
         subvariants = @(
@@ -73,7 +75,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.6.20-r0'
+        package_version = '2.6.20'
         distro = 'alpine'
         distro_version = '3.8'
         subvariants = @(
@@ -83,7 +85,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.4.6.0-r1'
+        package_version = '2.4.6.0'
         distro = 'alpine'
         distro_version = '3.7'
         subvariants = @(
@@ -110,7 +112,6 @@ $VARIANTS = @(
                 _metadata = @{
                     package = $variant['package']
                     package_version = $variant['package_version']
-                    package_version_semver = "v$( $variant['package_version'] )" -replace '-r\d+', ''   # E.g. Strip out the '-r' in '2.3.0.0-r1'
                     distro = $variant['distro']
                     distro_version = $variant['distro_version']
                     platforms = & {
