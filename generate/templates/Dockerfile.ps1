@@ -14,7 +14,7 @@ RUN set -eux; \
 "@
 if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.6') {
 @"
-    apk add --no-cache make g++ python3 python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
+    apk add --no-cache g++ make python3 python3-dev py3-pip libffi-dev rust cargo git openssl-dev; \
 
 "@
     if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.11') {
@@ -29,16 +29,16 @@ if ([version]$VARIANT['_metadata']['package_version'] -ge [version]'2.6') {
 "@
     }
 @"
-    apk del make g++ python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
+    apk del g++ make python3-dev py3-pip libffi-dev rust cargo git openssl-dev; \
 
 "@
 }else {
 @"
-    apk add --no-cache make g++ python2 python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
+    apk add --no-cache g++ make python2 python2-dev py2-pip libffi-dev rust cargo git openssl-dev; \
     # Fix PyYAML failing. See: https://stackoverflow.com/questions/76708329/docker-compose-no-longer-building-image-attributeerror-cython-sources
     pip install pyyaml==5.4.1 --no-cache-dir --no-build-isolation; \
     pip install ansible==$( $VARIANT['_metadata']['package_version'] ); \
-    apk del make g++ python2-dev py2-pip libffi-dev rust cargo openssl-dev; \
+    apk del g++ make python2-dev py2-pip libffi-dev rust cargo git openssl-dev; \
 
 "@
 }

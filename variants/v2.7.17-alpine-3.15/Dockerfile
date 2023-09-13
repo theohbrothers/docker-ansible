@@ -9,9 +9,9 @@ RUN set -eux; \
     export MAKEFLAGS="-j$(nproc)"; \
     # Fix cargo error when installing rust/cryptography-cffi: failed to fetch https://github.com/rust-lang/crates.io-index
     export CARGO_NET_GIT_FETCH_WITH_CLI=true; \
-    apk add --no-cache make g++ python3 python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
+    apk add --no-cache g++ make python3 python3-dev py3-pip libffi-dev rust cargo git openssl-dev; \
     pip install ansible==2.7.17; \
-    apk del make g++ python3-dev py3-pip libffi-dev rust cargo openssl-dev; \
+    apk del g++ make python3-dev py3-pip libffi-dev rust cargo git openssl-dev; \
     ansible --version
 
 RUN apk add --no-cache ca-certificates
