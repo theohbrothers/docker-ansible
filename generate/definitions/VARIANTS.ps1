@@ -4,8 +4,18 @@
 # See: https://wiki.archlinux.org/index.php?title=Ansible&action=history
 $local:VARIANTS_MATRIX = @(
     @{
-        package = 'ansible-core'
-        package_version = '2.14.5'
+        package = 'ansible'
+        package_version = '8.4.0'
+        distro = 'alpine'
+        distro_version = 'edge'
+        subvariants = @(
+            @{ components = @() }
+            @{ components = @( 'sops', 'ssh' ) }
+        )
+    }
+    @{
+        package = 'ansible'
+        package_version = '7.5.0'
         distro = 'alpine'
         distro_version = '3.18'
         subvariants = @(
@@ -14,8 +24,8 @@ $local:VARIANTS_MATRIX = @(
         )
     }
     @{
-        package = 'ansible-core'
-        package_version = '2.13.6'
+        package = 'ansible'
+        package_version = '6.6.0'
         distro = 'alpine'
         distro_version = '3.17'
         subvariants = @(
@@ -24,8 +34,18 @@ $local:VARIANTS_MATRIX = @(
         )
     }
     @{
-        package = 'ansible-core'
-        package_version = '2.11.6'
+        package = 'ansible'
+        package_version = '5.8.0'
+        distro = 'alpine'
+        distro_version = '3.16'
+        subvariants = @(
+            @{ components = @() }
+            @{ components = @( 'sops', 'ssh' ) }
+        )
+    }
+    @{
+        package = 'ansible'
+        package_version = '4.8.0'
         distro = 'alpine'
         distro_version = '3.15'
         subvariants = @(

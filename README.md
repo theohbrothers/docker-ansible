@@ -10,12 +10,16 @@ Dockerized `ansible` with useful tools.
 
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
-| `:v2.14.5-alpine-3.18`, `:latest` | [View](variants/v2.14.5-alpine-3.18) |
-| `:v2.14.5-sops-ssh-alpine-3.18` | [View](variants/v2.14.5-sops-ssh-alpine-3.18) |
-| `:v2.13.6-alpine-3.17` | [View](variants/v2.13.6-alpine-3.17) |
-| `:v2.13.6-sops-ssh-alpine-3.17` | [View](variants/v2.13.6-sops-ssh-alpine-3.17) |
-| `:v2.11.6-alpine-3.15` | [View](variants/v2.11.6-alpine-3.15) |
-| `:v2.11.6-sops-ssh-alpine-3.15` | [View](variants/v2.11.6-sops-ssh-alpine-3.15) |
+| `:v8.4.0-alpine-edge`, `:latest` | [View](variants/v8.4.0-alpine-edge) |
+| `:v8.4.0-sops-ssh-alpine-edge` | [View](variants/v8.4.0-sops-ssh-alpine-edge) |
+| `:v7.5.0-alpine-3.18` | [View](variants/v7.5.0-alpine-3.18) |
+| `:v7.5.0-sops-ssh-alpine-3.18` | [View](variants/v7.5.0-sops-ssh-alpine-3.18) |
+| `:v6.6.0-alpine-3.17` | [View](variants/v6.6.0-alpine-3.17) |
+| `:v6.6.0-sops-ssh-alpine-3.17` | [View](variants/v6.6.0-sops-ssh-alpine-3.17) |
+| `:v5.8.0-alpine-3.16` | [View](variants/v5.8.0-alpine-3.16) |
+| `:v5.8.0-sops-ssh-alpine-3.16` | [View](variants/v5.8.0-sops-ssh-alpine-3.16) |
+| `:v4.8.0-alpine-3.15` | [View](variants/v4.8.0-alpine-3.15) |
+| `:v4.8.0-sops-ssh-alpine-3.15` | [View](variants/v4.8.0-sops-ssh-alpine-3.15) |
 | `:v2.10.7-alpine-3.13` | [View](variants/v2.10.7-alpine-3.13) |
 | `:v2.10.7-sops-ssh-alpine-3.13` | [View](variants/v2.10.7-sops-ssh-alpine-3.13) |
 | `:v2.9.18-alpine-3.11` | [View](variants/v2.9.18-alpine-3.11) |
