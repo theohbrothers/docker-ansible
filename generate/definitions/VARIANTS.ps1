@@ -131,7 +131,7 @@ $VARIANTS = @(
                 # Metadata object
                 _metadata = @{
                     package = $variant['package']
-                    package_version = $variant['package_version'] -replace '-r\d+$', '' # Remove the '-r[0-9]' suffix
+                    package_version = $variant['package_version']
                     distro = $variant['distro']
                     distro_version = $variant['distro_version']
                     platforms = & {
@@ -142,10 +142,11 @@ $VARIANTS = @(
                         }
                     }
                     components = $subVariant['components']
+                    job_group_key = $variant['package_version']
                 }
                 # Docker image tag. E.g. 'v2.3.0.0-alpine-3.6'
                 tag = @(
-                        "v$( $variant['package_version'] )" -replace '-r\d+', ''    # E.g. Strip out the '-r' in '2.3.0.0-r1'
+                        "v$( $variant['package_version'] )"
                         $subVariant['components'] | ? { $_ }
                         $variant['distro']
                         $variant['distro_version']
