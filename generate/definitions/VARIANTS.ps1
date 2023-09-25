@@ -115,7 +115,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.3.0.0-r1'
+        package_version = '2.3.0.0'
         distro = 'alpine'
         distro_version = '3.6'
         subvariants = @(
@@ -131,7 +131,7 @@ $VARIANTS = @(
                 # Metadata object
                 _metadata = @{
                     package = $variant['package']
-                    package_version = $variant['package_version']
+                    package_version = $variant['package_version'] -replace '-r\d+$', '' # Remove the '-r[0-9]' suffix
                     distro = $variant['distro']
                     distro_version = $variant['distro_version']
                     platforms = & {
