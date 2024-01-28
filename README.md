@@ -10,7 +10,9 @@ Dockerized `ansible` with useful tools.
 
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
-| `:8.6.1-alpine-3.19`, `:latest` | [View](variants/8.6.1-alpine-3.19) |
+| `:9.1.0-alpine-edge`, `:latest` | [View](variants/9.1.0-alpine-edge) |
+| `:9.1.0-sops-ssh-alpine-edge` | [View](variants/9.1.0-sops-ssh-alpine-edge) |
+| `:8.6.1-alpine-3.19` | [View](variants/8.6.1-alpine-3.19) |
 | `:8.6.1-sops-ssh-alpine-3.19` | [View](variants/8.6.1-sops-ssh-alpine-3.19) |
 | `:7.5.0-alpine-3.18` | [View](variants/7.5.0-alpine-3.18) |
 | `:7.5.0-sops-ssh-alpine-3.18` | [View](variants/7.5.0-sops-ssh-alpine-3.18) |
