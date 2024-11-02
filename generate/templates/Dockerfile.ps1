@@ -44,6 +44,19 @@ RUN apk add --no-cache openssh-client
 "@
 }
 
+if ( $VARIANT['_metadata']['components'] -contains 'step' ) {
+    $STEP_VERSION = "v0.27.5"
+    Generate-DownloadBinary @{
+        binary = 'step'
+        version = $STEP_VERSION
+        archiveformat = '.tar.gz'
+        archivefiles = @()
+        checksumsUrl = "https://github.com/smallstep/cli/releases/download/$STEP_VERSION/checksums.txt"
+        destination = '/usr/local/bin/step'
+        testCommand = 'step version'
+    }
+}
+
 @"
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x docker-entrypoint.sh

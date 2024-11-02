@@ -10,7 +10,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = 'edge'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -20,7 +20,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.20'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -30,7 +30,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.19'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -40,7 +40,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.18'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -50,7 +50,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.17'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -60,7 +60,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.16'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -70,7 +70,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.15'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -80,7 +80,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.13'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -90,7 +90,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.11'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -100,7 +100,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.10'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -110,7 +110,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.9'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -120,7 +120,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.8'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -130,7 +130,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.7'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
     @{
@@ -140,7 +140,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.6'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh' ) }
+            @{ components = @( 'sops', 'ssh', 'step' ) }
         )
     }
 )
@@ -158,7 +158,11 @@ $VARIANTS = @(
                         if ($variant['distro'] -eq 'alpine' -and $variant['distro_version'] -in @('3.3', '3.4', '3.5')) {
                             'linux/amd64'
                         }else {
-                            'linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x'
+                            if ($subVariant['components'] -contains 'step') {
+                                'linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64'
+                            }else {
+                                'linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x'
+                            }
                         }
                     }
                     components = $subVariant['components']
