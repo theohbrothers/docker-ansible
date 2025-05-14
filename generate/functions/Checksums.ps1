@@ -1,3 +1,4 @@
+# Version 0.1.1
 # Global cache for checksums
 function Set-Checksums($k, $url) {
     $global:CHECKSUMS = if (Get-Variable -Scope Global -Name CHECKSUMS -ErrorAction SilentlyContinue) { $global:CHECKSUMS } else { @{} }
