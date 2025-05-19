@@ -10,7 +10,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.21'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -20,7 +20,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.20'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -30,7 +30,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.19'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -40,7 +40,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.18'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -50,7 +50,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.17'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -60,7 +60,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.16'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -70,7 +70,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.15'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -80,7 +80,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.13'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -90,7 +90,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.11'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -100,7 +100,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.10'
         subvariants = @(
             @{ components = $null }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -110,7 +110,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.9'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -120,7 +120,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.8'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -130,7 +130,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.7'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
     @{
@@ -140,7 +140,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.6'
         subvariants = @(
             @{ components = @() }
-            @{ components = @( 'sops', 'ssh', 'step' ) }
+            @{ components = @( 'sops', 'ssh' ) }
         )
     }
 )

@@ -14,6 +14,17 @@ RUN apk add --no-cache ca-certificates
 
 "@
 
+$STEP_VERSION = "v0.27.5"
+Generate-DownloadBinary @{
+    binary = 'step'
+    version = $STEP_VERSION
+    archiveformat = '.tar.gz'
+    archivefiles = @()
+    checksumsUrl = "https://github.com/smallstep/cli/releases/download/$STEP_VERSION/checksums.txt"
+    destination = '/usr/local/bin/step'
+    testCommand = 'step version'
+}
+
 if ( $VARIANT['_metadata']['components'] -contains 'sops' ) {
     if ( $VARIANT['_metadata']['distro'] -eq 'alpine' -and $VARIANT['_metadata']['distro_version'] -eq '3.6' ) {
         @"
@@ -42,19 +53,6 @@ RUN apk add --no-cache openssh-client
 
 
 "@
-}
-
-if ( $VARIANT['_metadata']['components'] -contains 'step' ) {
-    $STEP_VERSION = "v0.27.5"
-    Generate-DownloadBinary @{
-        binary = 'step'
-        version = $STEP_VERSION
-        archiveformat = '.tar.gz'
-        archivefiles = @()
-        checksumsUrl = "https://github.com/smallstep/cli/releases/download/$STEP_VERSION/checksums.txt"
-        destination = '/usr/local/bin/step'
-        testCommand = 'step version'
-    }
 }
 
 @"
