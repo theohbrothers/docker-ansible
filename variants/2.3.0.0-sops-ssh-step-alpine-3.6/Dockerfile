@@ -59,13 +59,15 @@ RUN set -eux; \
     FILE=step.tar.gz; \
     wget -q "$URL" -O "$FILE"; \
     echo "$SHA256  $FILE" | sha256sum -c -; \
-    tar -xvf "$FILE" --no-same-owner --no-same-permissions; \
-    rm -f "$FILE"; \
+    mkdir -p extract; \
+    tar -C extract -xvf "$FILE" --no-same-owner --no-same-permissions; \
     mkdir -pv /usr/local/bin; \
-    BIN=$( find . -type f -name "step" | head -n1 ); \
+    BIN=$( find extract -type f -name "step" | head -n1 ); \
     mv -v "$BIN" /usr/local/bin/step; \
     chmod +x /usr/local/bin/step; \
     step version; \
+    rm -rf extract; \
+    rm -f "$FILE"; \
     :
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
