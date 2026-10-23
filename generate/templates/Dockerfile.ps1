@@ -23,13 +23,18 @@ RUN apk add --no-cache libressl
 
 "@
     }
-    @"
-RUN set -eux; \
-    wget -qO- https://github.com/mozilla/sops/releases/download/v3.7.3/sops-v3.7.3.linux > /usr/local/bin/sops; \
-    chmod +x /usr/local/bin/sops; \
-    sha256sum /usr/local/bin/sops | grep '^53aec65e45f62a769ff24b7e5384f0c82d62668dd96ed56685f649da114b4dbb '; \
-    sops --version
 
+    $SOPS_VERSION = "3.13.3"
+    Generate-DownloadBinary @{
+        binary = 'sops'
+        version = $SOPS_VERSION
+        checksumsUrl = "https://github.com/getsops/sops/releases/download/v$SOPS_VERSION/sops-v$SOPS_VERSION.checksums.txt"
+        platformFallback = 'linux/amd64'
+        destination = '/usr/local/bin/sops'
+        testCommand = 'sops --version --disable-version-check'
+    }
+
+    @"
 RUN apk add --no-cache gnupg
 
 
