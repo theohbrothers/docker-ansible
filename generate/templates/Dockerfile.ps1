@@ -35,6 +35,7 @@ RUN apk add --no-cache libressl
     }
 
     @"
+# Install gnupg for sops
 RUN apk add --no-cache gnupg
 
 
@@ -50,11 +51,11 @@ RUN apk add --no-cache openssh-client
 }
 
 if ( $VARIANT['_metadata']['components'] -contains 'step' ) {
-    $STEP_VERSION = "v0.27.5"
+    $STEP_VERSION = "0.31.0"
     Generate-DownloadBinary @{
         binary = 'step'
         version = $STEP_VERSION
-        checksumsUrl = "https://github.com/smallstep/cli/releases/download/$STEP_VERSION/checksums.txt"
+        checksumsUrl = "https://github.com/smallstep/cli/releases/download/v$STEP_VERSION/checksums.txt"
         archiveformat = '.tar.gz'
         # platforms = $VARIANT['_metadata']['platforms']
         destination = '/usr/local/bin/step'
