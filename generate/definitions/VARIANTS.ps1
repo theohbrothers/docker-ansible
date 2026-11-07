@@ -5,7 +5,7 @@
 $local:VARIANTS_MATRIX = @(
     @{
         package = 'ansible'
-        package_version = '14.5.0'
+        package_version = '14.6.0'
         distro = 'alpine'
         distro_version = 'edge'
         subvariants = @(
